@@ -1,0 +1,1326 @@
+/* ==========================================
+   BABY SHIBA INU
+   SHIBARIUM GAME - COMPLETE STYLE
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    background: #080808;
+    color: #ffffff;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   GLOBAL
+   ========================================== */
+
+button {
+    font-family: inherit;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================
+   APP CONTAINER
+   ========================================== */
+
+#app,
+.app,
+.game-container {
+    width: 100%;
+    min-height: 100vh;
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   INTRO SCREEN
+   ========================================== */
+
+#intro-screen,
+.intro-screen {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(255, 193, 7, 0.12),
+            transparent 38%
+        ),
+        #080808;
+}
+
+.intro-logo {
+    width: 210px;
+    height: 210px;
+    object-fit: contain;
+
+    margin-bottom: 20px;
+
+    animation: introFloat 3s ease-in-out infinite;
+}
+
+.intro-screen h1,
+.intro-title {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.intro-screen p,
+.intro-subtitle {
+    margin: 8px 0 30px;
+
+    color: #8e8e8e;
+    font-size: 16px;
+}
+
+.start-btn,
+#start-mining-btn {
+    width: min(340px, 90%);
+
+    min-height: 58px;
+
+    border: 0;
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #ffd34d,
+        #f0a900
+    );
+
+    color: #151515;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(255, 193, 7, 0.18);
+}
+
+@keyframes introFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ==========================================
+   MAIN GAME
+   ========================================== */
+
+#game-screen,
+.game-screen {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 14px 0 130px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 193, 7, 0.06),
+            transparent 35%
+        ),
+        #080808;
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.game-header,
+.header {
+    width: calc(100% - 28px);
+
+    margin: 0 14px 16px;
+
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 22px;
+
+    background: rgba(18, 18, 18, 0.95);
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    min-width: 0;
+}
+
+.header-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.header-title {
+    min-width: 0;
+}
+
+.header-title h2 {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.header-title p {
+    margin: 4px 0 0;
+
+    color: #858585;
+    font-size: 14px;
+}
+
+.sound-btn {
+    width: 52px;
+    height: 52px;
+
+    border: 0;
+    border-radius: 17px;
+
+    background: #151515;
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+/* ==========================================
+   PAGE CONTENT
+   ========================================== */
+
+.page {
+    width: 100%;
+    padding: 0 0 20px;
+}
+
+.section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    margin: 0 20px 12px;
+
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.section-subtitle {
+    margin: -5px 20px 18px;
+
+    color: #858585;
+    font-size: 14px;
+}
+
+/* ==========================================
+   PLAYER CARD
+   ========================================== */
+
+.player-card {
+    width: calc(100% - 28px);
+
+    margin: 0 14px 18px;
+
+    padding: 20px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(31, 31, 31, 0.96),
+            rgba(17, 17, 17, 0.96)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.player-avatar {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 18px;
+
+    object-fit: contain;
+
+    background: #151515;
+}
+
+.player-name {
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.player-id {
+    margin-top: 4px;
+
+    color: #777777;
+    font-size: 13px;
+}
+
+/* ==========================================
+   BALANCE
+   ========================================== */
+
+.balance-card {
+    width: calc(100% - 28px);
+
+    margin: 0 14px 18px;
+
+    padding: 24px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(52, 42, 16, 0.95),
+            rgba(24, 22, 15, 0.95)
+        );
+
+    border: 1px solid rgba(255, 193, 7, 0.20);
+}
+
+.balance-label {
+    color: #888888;
+    font-size: 14px;
+}
+
+.balance-value {
+    margin-top: 8px;
+
+    color: #ffd23f;
+
+    font-size: 31px;
+    font-weight: 900;
+
+    word-break: break-word;
+}
+
+.balance-symbol {
+    margin-left: 5px;
+
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* ==========================================
+   MINING
+   ========================================== */
+
+.mining-card {
+    width: calc(100% - 28px);
+
+    margin: 0 14px 18px;
+
+    padding: 22px;
+
+    border-radius: 25px;
+
+    background: #111111;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    text-align: center;
+}
+
+.mine-button,
+.mine-btn {
+    width: 170px;
+    height: 170px;
+
+    margin: 10px auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #292929 0%,
+            #151515 55%,
+            #0d0d0d 100%
+        );
+
+    box-shadow:
+        0 0 0 8px rgba(255, 193, 7, 0.06),
+        0 12px 35px rgba(0, 0, 0, 0.5);
+
+    cursor: pointer;
+
+    color: #ffffff;
+
+    font-size: 55px;
+}
+
+.mine-button:active,
+.mine-btn:active {
+    transform: scale(0.94);
+}
+
+.mining-rate {
+    color: #ffd23f;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.energy-container {
+    margin-top: 18px;
+}
+
+.energy-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    color: #9b9b9b;
+    font-size: 14px;
+}
+
+.energy-bar {
+    width: 100%;
+    height: 11px;
+
+    overflow: hidden;
+
+    border-radius: 99px;
+
+    background: #292929;
+}
+
+.energy-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #ffd23f,
+        #ffb300
+    );
+
+    transition: width 0.2s ease;
+}
+
+/* ==========================================
+   STATS
+   ========================================== */
+
+.stats-grid {
+    width: calc(100% - 28px);
+
+    margin: 0 14px 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+.stat-card {
+    min-width: 0;
+
+    padding: 16px;
+
+    border-radius: 18px;
+
+    background: #141414;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-label {
+    color: #777777;
+    font-size: 13px;
+}
+
+.stat-value {
+    margin-top: 6px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    word-break: break-word;
+}
+
+/* ==========================================
+   ITEMS / SHOP
+   ========================================== */
+
+.items-grid,
+.shop-grid,
+.upgrades-grid {
+    width: calc(100% - 28px);
+
+    margin: 0 14px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.item-card,
+.shop-card,
+.upgrade-card {
+    min-width: 0;
+
+    padding: 18px;
+
+    border-radius: 21px;
+
+    background: #141414;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.item-card h3,
+.shop-card h3,
+.upgrade-card h3 {
+    margin: 8px 0;
+
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.item-card p,
+.shop-card p,
+.upgrade-card p {
+    margin: 0;
+
+    color: #858585;
+    font-size: 13px;
+}
+
+/* ==========================================
+   GENERAL ACTION BUTTON
+   ========================================== */
+
+.action-btn,
+.buy-btn,
+.upgrade-btn {
+    width: 100%;
+
+    min-height: 48px;
+
+    margin-top: 14px;
+
+    border: 0;
+    border-radius: 15px;
+
+    background: #252525;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.action-btn.primary,
+.buy-btn.primary,
+.upgrade-btn.primary {
+    background: linear-gradient(
+        135deg,
+        #ffd34d,
+        #f0a900
+    );
+
+    color: #151515;
+}
+
+/* ==========================================
+   VIP MEMBERSHIP
+   ========================================== */
+
+.vip-section {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 18px 0 135px;
+
+    overflow: hidden;
+}
+
+.vip-section h2 {
+    margin: 0 20px 6px;
+
+    color: #ffffff;
+
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.vip-section > p {
+    margin: 0 20px 22px;
+
+    color: #8f8f8f;
+
+    font-size: 16px;
+}
+
+/* VIP CARD */
+
+.vip-card {
+    width: calc(100% - 28px);
+    max-width: 100%;
+
+    margin: 0 14px 20px;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(38, 38, 38, 0.96),
+            rgba(20, 20, 20, 0.96)
+        );
+
+    overflow: hidden;
+}
+
+/* CURRENT VIP */
+
+.vip-card.current {
+    border-color: rgba(255, 193, 7, 0.45);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(65, 48, 8, 0.92),
+            rgba(28, 25, 17, 0.96)
+        );
+}
+
+/* VIP HEADER */
+
+.vip-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    width: 100%;
+    min-width: 0;
+
+    margin-bottom: 20px;
+}
+
+.vip-icon {
+    width: 68px;
+    height: 68px;
+
+    min-width: 68px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 19px;
+
+    background: rgba(255, 193, 7, 0.10);
+
+    border: 1px solid rgba(255, 193, 7, 0.22);
+
+    font-size: 36px;
+}
+
+.vip-title {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.vip-title h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+}
+
+.vip-title p {
+    margin: 5px 0 0;
+
+    color: #888888;
+
+    font-size: 14px;
+}
+
+/* VIP FEATURES */
+
+.vip-features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+.vip-feature {
+    width: 100%;
+
+    min-height: 48px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 0 12px;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    overflow: hidden;
+}
+
+.vip-feature-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 0;
+
+    color: #bdbdbd;
+
+    font-size: 14px;
+}
+
+.vip-feature-right {
+    flex: 0 0 auto;
+
+    color: #ffd23f;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+/* VIP PRICE */
+
+.vip-price {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-top: 20px;
+
+    padding: 15px 12px;
+
+    border-radius: 17px;
+
+    background: rgba(255, 193, 7, 0.10);
+
+    color: #ffd23f;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+/* CURRENT */
+
+.vip-current {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 17px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #cfcfcf;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+/* VIP BUY */
+
+.vip-buy-btn {
+    width: 100%;
+
+    min-height: 56px;
+
+    margin-top: 20px;
+
+    padding: 14px 18px;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd34d,
+            #f2a900
+        );
+
+    color: #151515;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    white-space: normal;
+}
+
+.vip-buy-btn:active {
+    transform: scale(0.97);
+}
+
+.vip-buy-btn:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   FRIENDS / REFERRAL
+   ========================================== */
+
+.referral-card,
+.friends-card {
+    width: calc(100% - 28px);
+
+    margin: 0 14px 18px;
+
+    padding: 22px;
+
+    border-radius: 23px;
+
+    background: #141414;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.referral-title,
+.friends-title {
+    color: #ffffff;
+
+    font-size: 21px;
+
+    font-weight: 800;
+}
+
+.referral-text,
+.friends-text {
+    margin-top: 7px;
+
+    color: #858585;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+.referral-code {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    background: #0d0d0d;
+
+    color: #ffd23f;
+
+    text-align: center;
+
+    word-break: break-all;
+}
+
+/* ==========================================
+   ARENA
+   ========================================== */
+
+.arena-card {
+    width: calc(100% - 28px);
+
+    margin: 0 14px 20px;
+
+    padding: 25px 20px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(35, 30, 18, 0.96),
+            rgba(17, 17, 17, 0.96)
+        );
+
+    border: 1px solid rgba(255, 193, 7, 0.14);
+}
+
+.arena-card h2 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 25px;
+}
+
+.arena-card p {
+    margin: 0;
+
+    color: #888888;
+
+    line-height: 1.5;
+}
+
+.arena-coming {
+    margin-top: 18px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #ffd23f;
+
+    font-weight: 700;
+}
+
+/* ==========================================
+   BOTTOM NAVIGATION
+   ========================================== */
+
+.bottom-nav {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    max-width: 520px;
+
+    min-height: 88px;
+
+    z-index: 9999;
+
+    display: grid;
+
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    align-items: stretch;
+
+    padding:
+        8px
+        5px
+        calc(8px + env(safe-area-inset-bottom));
+
+    background: rgba(7, 7, 7, 0.98);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.bottom-nav button,
+.bottom-nav .nav-item {
+    min-width: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    padding: 5px 2px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.bottom-nav button span,
+.bottom-nav .nav-icon {
+    display: block;
+
+    font-size: 25px;
+
+    line-height: 1;
+}
+
+.bottom-nav button.active,
+.bottom-nav .nav-item.active {
+    color: #ffd23f;
+}
+
+.bottom-nav button.active span,
+.bottom-nav .nav-item.active .nav-icon {
+    transform: translateY(-1px);
+}
+
+/* ==========================================
+   TOAST
+   ========================================== */
+
+#toast,
+.toast {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 105px;
+
+    transform: translateX(-50%);
+
+    z-index: 10000;
+
+    max-width: calc(100% - 40px);
+
+    padding: 12px 18px;
+
+    border-radius: 14px;
+
+    background: rgba(25, 25, 25, 0.96);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+
+    pointer-events: none;
+}
+
+/* ==========================================
+   MINING EFFECTS
+   ========================================== */
+
+.coin-effect {
+    position: fixed;
+
+    z-index: 10001;
+
+    pointer-events: none;
+
+    color: #ffd23f;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    animation: coinFloat 0.9s ease-out forwards;
+}
+
+@keyframes coinFloat {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-80px) scale(1.15);
+    }
+}
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    #game-screen,
+    .game-screen {
+        padding-bottom: 125px;
+    }
+
+    .game-header,
+    .header {
+        width: calc(100% - 28px);
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .mine-button,
+    .mine-btn {
+        width: 155px;
+        height: 155px;
+    }
+
+    .bottom-nav {
+        min-height: 86px;
+    }
+
+    .bottom-nav button,
+    .bottom-nav .nav-item {
+        font-size: 11px;
+    }
+
+    .bottom-nav button span,
+    .bottom-nav .nav-icon {
+        font-size: 23px;
+    }
+}
+
+/* ==========================================
+   SMALL PHONES
+   ========================================== */
+
+@media (max-width: 380px) {
+
+    .header-title h2 {
+        font-size: 18px;
+    }
+
+    .header-title p {
+        font-size: 12px;
+    }
+
+    .sound-btn {
+        width: 46px;
+        height: 46px;
+    }
+
+    .mine-button,
+    .mine-btn {
+        width: 135px;
+        height: 135px;
+
+        font-size: 45px;
+    }
+
+    .items-grid,
+    .shop-grid,
+    .upgrades-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vip-card {
+        width: calc(100% - 20px);
+
+        margin-left: 10px;
+        margin-right: 10px;
+
+        padding: 15px;
+    }
+
+    .vip-icon {
+        width: 60px;
+        height: 60px;
+
+        min-width: 60px;
+
+        font-size: 32px;
+    }
+
+    .vip-title h3 {
+        font-size: 22px;
+    }
+
+    .vip-feature-left,
+    .vip-feature-right {
+        font-size: 13px;
+    }
+
+    .bottom-nav button span,
+    .bottom-nav .nav-icon {
+        font-size: 21px;
+    }
+}
+
+/* ==========================================
+   SAFE AREA
+   ========================================== */
+
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+
+    .bottom-nav {
+        padding-bottom:
+            calc(8px + env(safe-area-inset-bottom));
+    }
+}
+
+/* ==========================================
+   FINAL VIP OVERFLOW PROTECTION
+   ========================================== */
+
+.vip-section,
+.vip-card,
+.vip-header,
+.vip-features,
+.vip-feature,
+.vip-price,
+.vip-current,
+.vip-buy-btn {
+    max-width: 100%;
+}
+
+.vip-card * {
+    max-width: 100%;
+}
+
+.vip-feature-left {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.vip-feature-right {
+    overflow: hidden;
+    text-overflow: ellipsis;
+      }
