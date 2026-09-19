@@ -1,0 +1,1062 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport"  
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">  <title>Baby Shiba Inu</title>  
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>  
+
+<link rel="stylesheet" href="style.css">
+
+</head>  <body>  <div class="app">  <!-- ============================= -->  
+<!-- INTRO SCREEN -->  
+<!-- ============================= -->  
+
+<section id="introPage" class="page intro-page active">  
+
+    <div class="intro-content">  
+
+        <div class="intro-logo">  
+          <img src="file_00000000475481f4afc8aeaecd6da9b6.png"  
+ alt="Baby Shiba Inu"  
+ style="width:210px;height:210px;max-width:210px;max-height:210px;object-fit:contain;display:block;margin:0 auto;">  
+        </div>  
+
+        <h1>Baby Shiba Inu</h1>  
+
+        <p class="intro-text">  
+            Mine • Upgrade • Explore  
+        </p>  
+
+        <p class="intro-subtitle">  
+            Build your Shiba journey.  
+        </p>  
+
+        <button id="startGame" class="primary-btn">  
+            🐕 START MINING  
+        </button>  
+
+    </div>  
+
+</section>  
+
+
+<!-- ============================= -->  
+<!-- MAIN GAME -->  
+<!-- ============================= -->  
+
+<main id="gameApp" class="game-app hidden">  
+
+    <!-- HEADER -->  
+
+    <header class="header">  
+
+        <div class="brand">  
+
+            <div class="brand-logo">  
+🐕  
+            </div>  
+
+            <div>  
+                <div class="brand-title">  
+                    Baby Shiba Inu  
+                </div>  
+
+                <div class="brand-subtitle">  
+                    BSHIB Mining  
+                </div>  
+            </div>  
+
+        </div>  
+
+        <button id="soundBtn"  
+            class="sound-btn">  
+            🔊  
+        </button>  
+
+    </header>  
+
+
+    <!-- ============================= -->  
+    <!-- MINING PAGE -->  
+    <!-- ============================= -->  
+
+    <section id="miningPage"  
+             class="page game-page active">  
+
+        <div class="player-card">  
+
+            <div class="player-info">  
+
+                <div class="player-avatar">  
+                    🐕  
+                </div>  
+
+                <div>  
+
+                    <div id="playerName"  
+                         class="player-name">  
+                        Player  
+                    </div>  
+
+                    <div id="playerId"  
+                         class="player-id">  
+                        Telegram ID  
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+            <div class="status">  
+
+                <span class="status-dot"></span>  
+
+                <span id="miningStatus">  
+                    Mining  
+                </span>  
+
+            </div>  
+
+        </div>  
+
+
+        <!-- BALANCE -->  
+
+        <div class="balance-card">  
+
+            <div class="balance-label">  
+                YOUR BALANCE  
+            </div>  
+
+            <div class="balance-row">  
+
+
+                <div id="balance"  
+                     class="balance">  
+                    0  
+                </div>  
+
+                <span class="token-name">  
+                    BSHIB  
+                </span>  
+
+            </div>  
+
+            <div class="level-box">  
+
+                <div class="level-row">  
+
+                    <span id="levelName">  
+                        Shiba Rookie  
+                    </span>  
+
+                    <span>  
+                        LVL <b id="level">1</b>  
+                    </span>  
+
+                </div>  
+
+                <div class="progress">  
+                    <div id="xpFill"  
+                         class="progress-fill">  
+                    </div>  
+                </div>  
+
+            </div>  
+
+        </div>  
+
+
+        <!-- MINING -->  
+
+        <div class="mining-card">  
+
+            <div class="mining-status">  
+                ⛏️ MINING  
+            </div>  
+
+            <div class="coin-container">  
+
+                <button id="shibaButton"  
+    class="shiba-button"  
+    type="button">  
+
+<img  
+    src="file_00000000475481f4afc8aeaecd6da9b6.png"  
+    alt="BSHIB">  
+      
+                </button>  
+
+            </div>  
+
+            <div class="tap-hint">  
+                TAP TO MINE BSHIB  
+            </div>  
+
+            <div class="mining-info">  
+
+                <div class="mining-stat">  
+
+                    <span>  
+                        ⚡ Power  
+                    </span>  
+
+                    <strong id="tapPower">  
+                        1  
+                    </strong>  
+
+                </div>  
+
+                <div class="mining-stat">  
+
+                    <span>  
+                        🚀 Rate  
+                    </span>  
+
+                    <strong id="mineRate">  
+                        1 BSHIB/s  
+                    </strong>  
+
+                </div>  
+
+            </div>  
+
+        </div>  
+
+
+        <!-- ENERGY -->  
+
+        <div class="energy-box">  
+
+            <div class="energy-row">  
+
+                <span>⚡ Energy</span>  
+
+                <span>  
+                    <b id="energy">1000</b>  
+                    /  
+                    <span id="maxEnergy">1000</span>  
+                </span>  
+
+            </div>  
+
+            <div class="energy-fill-box">  
+
+                <div id="energyFill"  
+                     class="energy-fill">  
+                </div>  
+
+            </div>  
+
+        </div>  
+
+
+        <!-- MINING STATS -->  
+
+        <div class="stats-card">  
+
+            <div class="stat-item">  
+
+                <span>Total Mined</span>  
+
+                <strong id="totalMined">  
+                    0  
+                </strong>  
+
+                <small>BSHIB</small>  
+
+            </div>  
+
+            <div class="stat-item">  
+
+                <span>Mining Rate</span>  
+
+                <strong id="statsMineRate">  
+                    1  
+                </strong>  
+
+                <small>BSHIB/s</small>  
+
+            </div>  
+
+        </div>  
+
+    </section>  
+
+
+    <!-- ============================= -->  
+    <!-- ITEMS PAGE -->  
+    <!-- ============================= -->  
+
+    <section id="itemsPage"  
+             class="page game-page">  
+
+        <div class="page-header">  
+
+            <h2>🎒 Items</h2>  
+
+            <p>  
+                Your Baby Shiba items  
+            </p>  
+
+        </div>  
+
+        <div class="empty-card">  
+
+            <div class="empty-icon">  
+                🎒  
+            </div>  
+
+            <h3>Your Items</h3>  
+
+            <p>  
+                Items you earn or purchase will appear here.  
+            </p>  
+
+        </div>  
+
+    </section>  
+
+
+    <!-- ============================= -->  
+    <section id="shopPage"  
+     class="page game-page">  
+
+<div class="page-header">  
+
+    <h2>🛒 Shiba Shop</h2>  
+
+    <p>  
+        Upgrade your mining experience  
+    </p>  
+
+</div>  
+
+<div class="shop-grid">  
+
+    <!-- Energy Pack -->  
+
+    <div class="shop-card">  
+
+        <div class="shop-icon">  
+            ⚡  
+        </div>  
+
+        <h3>Energy Pack</h3>  
+
+        <p>  
+            Restore 500 mining energy.  
+        </p>  
+
+        <button id="buyEnergyPack"  
+                class="shop-btn">  
+
+            <span id="energyPackCost">  
+                250  
+            </span>  
+            BSHIB  
+
+        </button>  
+
+    </div>  
+
+
+    <!-- Mining Boost -->  
+
+    <div class="shop-card">  
+
+        <div class="shop-icon">  
+            🚀  
+        </div>  
+
+        <h3>Mining Boost</h3>  
+
+        <p>  
+            Increase mining power.  
+        </p>  
+
+        <button id="buyMiningBoost"  
+                class="shop-btn">  
+
+            <span id="miningBoostCost">  
+                500  
+            </span>  
+            BSHIB  
+
+        </button>  
+
+    </div>  
+
+</div>  
+
+    </section>  
+
+
+    <!-- ============================= -->  
+    <section id="vipPage" class="page game-page">  
+
+<div class="page-header">  
+    <h2>👑 Baby Shiba VIP</h2>  
+    <p>Unlock more mining power and rewards</p>  
+</div>  
+
+<!-- CURRENT VIP -->  
+<div class="vip-current-box">  
+
+    <div class="vip-current-icon">  
+        👑  
+    </div>  
+
+    <div class="vip-current-info">  
+
+        <span class="vip-current-label">  
+            Current Membership  
+        </span>  
+
+        <strong id="vipCurrentName">  
+            Free Member  
+        </strong>  
+
+        <span id="vipLevel">  
+            VIP 0  
+        </span>  
+
+    </div>  
+
+</div>  
+
+
+<!-- VIP STATS -->  
+<div class="vip-stats">  
+
+    <div class="vip-stat">  
+        <span>⛏️</span>  
+        <small>Mining Bonus</small>  
+        <strong id="vipMiningBonus">  
+            +0%  
+        </strong>  
+    </div>  
+
+    <div class="vip-stat">  
+        <span>⚡</span>  
+        <small>Energy Bonus</small>  
+        <strong id="vipEnergyBonus">  
+            +0  
+        </strong>  
+    </div>  
+
+    <div class="vip-stat">  
+        <span>🎁</span>  
+        <small>Daily Reward</small>  
+        <strong id="vipDailyReward">  
+            Locked  
+        </strong>  
+    </div>  
+
+</div>  
+
+
+<!-- DAILY REWARD -->  
+<button  
+    id="claimVipReward"  
+    class="vip-reward-btn"  
+    disabled  
+>  
+    🔒 VIP Reward Locked  
+</button>  
+
+
+<!-- VIP MEMBERSHIP -->  
+<div class="vip-section-title">  
+
+    <h3>VIP Membership</h3>  
+
+    <p>  
+        Upgrade your Baby Shiba journey  
+    </p>  
+
+</div>  
+
+
+<!-- MAIN VIP CONTAINER -->  
+<div class="vip-level-container">  
+
+
+    <!-- VIP 0 -->  
+    <div  
+        class="vip-level-card current-vip"  
+        data-vip-level="0"  
+    >  
+
+        <div class="vip-card-top">  
+
+            <div class="vip-card-icon">  
+                🆓  
+            </div>  
+
+            <div>  
+                <h3>VIP 0</h3>  
+                <span>Free Member</span>  
+            </div>  
+
+        </div>  
+
+        <div class="vip-benefits">  
+
+            <div>  
+                ⛏️ Mining  
+                <strong>+0%</strong>  
+            </div>  
+
+            <div>  
+                ⚡ Energy  
+                <strong>+0</strong>  
+            </div>  
+
+            <div>  
+                🎁 Daily  
+                <strong>Locked</strong>  
+            </div>  
+
+        </div>  
+
+        <button  
+            class="vip-buy-btn"  
+            disabled  
+        >  
+            ✅ Current  
+        </button>  
+
+    </div>  
+
+
+    <!-- VIP 1 -->  
+    <div  
+        class="vip-level-card"  
+        data-vip-level="1"  
+    >  
+
+        <div class="vip-card-top">  
+
+            <div class="vip-card-icon">  
+                🥉  
+            </div>  
+
+            <div>  
+                <h3>VIP 1</h3>  
+                <span>Starter</span>  
+            </div>  
+
+        </div>  
+
+        <div class="vip-benefits">  
+
+            <div>  
+                ⛏️ Mining  
+                <strong>+10%</strong>  
+            </div>  
+
+            <div>  
+                ⚡ Energy  
+                <strong>+100</strong>  
+            </div>  
+
+            <div>  
+                🎁 Daily  
+                <strong>500 BSHIB</strong>  
+            </div>  
+
+        </div>  
+
+        <div class="vip-price">  
+            10,000 BSHIB  
+        </div>  
+
+        <button  
+            class="vip-buy-btn"  
+            data-vip-level="1"  
+        >  
+            👑 Activate VIP 1  
+        </button>  
+
+    </div>  
+
+
+    <!-- VIP 2 -->  
+    <div  
+        class="vip-level-card"  
+        data-vip-level="2"  
+    >  
+
+        <div class="vip-card-top">  
+
+            <div class="vip-card-icon">  
+                🥈  
+            </div>  
+
+            <div>  
+                <h3>VIP 2</h3>  
+                <span>Hunter</span>  
+            </div>  
+
+        </div>  
+
+        <div class="vip-benefits">  
+
+            <div>  
+                ⛏️ Mining  
+                <strong>+25%</strong>  
+            </div>  
+
+            <div>  
+                ⚡ Energy  
+                <strong>+250</strong>  
+            </div>  
+
+            <div>  
+                🎁 Daily  
+                <strong>1,000 BSHIB</strong>  
+            </div>  
+
+        </div>  
+
+        <div class="vip-price">  
+            50,000 BSHIB  
+        </div>  
+
+        <button  
+            class="vip-buy-btn"  
+            data-vip-level="2"  
+        >  
+            👑 Activate VIP 2  
+        </button>  
+
+    </div>  
+
+
+    <!-- VIP 3 -->  
+    <div  
+        class="vip-level-card"  
+        data-vip-level="3"  
+    >  
+
+        <div class="vip-card-top">  
+
+            <div class="vip-card-icon">  
+                🏆  
+            </div>  
+
+            <div>  
+                <h3>VIP 3</h3>  
+                <span>Warrior</span>  
+            </div>  
+
+        </div>  
+
+        <div class="vip-benefits">  
+
+            <div>  
+                ⛏️ Mining  
+                <strong>+50%</strong>  
+            </div>  
+
+            <div>  
+                ⚡ Energy  
+                <strong>+500</strong>  
+            </div>  
+
+            <div>  
+                🎁 Daily  
+                <strong>2,500 BSHIB</strong>  
+            </div>  
+
+        </div>  
+
+        <div class="vip-price">  
+            150,000 BSHIB  
+        </div>  
+
+        <button  
+            class="vip-buy-btn"  
+            data-vip-level="3"  
+        >  
+            👑 Activate VIP 3  
+        </button>  
+
+    </div>  
+
+
+    <!-- VIP 4 -->  
+    <div  
+        class="vip-level-card"  
+        data-vip-level="4"  
+    >  
+
+        <div class="vip-card-top">  
+
+            <div class="vip-card-icon">  
+                💎  
+            </div>  
+
+            <div>  
+                <h3>VIP 4</h3>  
+                <span>Elite</span>  
+            </div>  
+
+        </div>  
+
+        <div class="vip-benefits">  
+
+            <div>  
+                ⛏️ Mining  
+                <strong>+75%</strong>  
+            </div>  
+
+            <div>  
+                ⚡ Energy  
+                <strong>+750</strong>  
+            </div>  
+
+            <div>  
+                🎁 Daily  
+                <strong>5,000 BSHIB</strong>  
+            </div>  
+
+        </div>  
+
+        <div class="vip-price">  
+            400,000 BSHIB  
+        </div>  
+
+        <button  
+            class="vip-buy-btn"  
+            data-vip-level="4"  
+        >  
+            👑 Activate VIP 4  
+        </button>  
+
+    </div>  
+
+
+    <!-- VIP 5 -->  
+    <div  
+        class="vip-level-card vip-5-card"  
+        data-vip-level="5"  
+    >  
+
+        <div class="vip-card-top">  
+
+            <div class="vip-card-icon">  
+                👑  
+            </div>  
+
+            <div>  
+                <h3>VIP 5</h3>  
+                <span>Shiba Legend</span>  
+            </div>  
+
+        </div>  
+
+        <div class="vip-benefits">  
+
+            <div>  
+                ⛏️ Mining  
+                <strong>+100%</strong>  
+            </div>  
+
+            <div>  
+                ⚡ Energy  
+                <strong>+1,000</strong>  
+            </div>  
+
+            <div>  
+                🎁 Daily  
+                <strong>10,000 BSHIB</strong>  
+            </div>  
+
+        </div>  
+
+        <div class="vip-price">  
+            1,000,000 BSHIB  
+        </div>  
+
+        <button  
+            class="vip-buy-btn"  
+            data-vip-level="5"  
+        >  
+            👑 Activate VIP 5  
+        </button>  
+
+    </div>  
+
+
+</div>  
+
+</section>  
+
+
+    <!-- ============================= -->  
+    <!-- FRIENDS PAGE -->  
+    <!-- ============================= -->  
+
+    <section id="friendsPage"  
+             class="page game-page">  
+
+        <div class="page-header">  
+
+            <h2>👥 Friends</h2>  
+
+            <p>  
+                Invite friends to Baby Shiba Inu  
+            </p>  
+
+        </div>  
+
+        <div class="referral-card">  
+
+            <div class="referral-title">  
+                🐕 Invite & Earn  
+            </div>  
+
+            <div class="referral-text">  
+                Share your referral link with your friends.  
+            </div>  
+
+            <div class="ref-code-box">  
+
+                <span id="refCode">  
+                    BSHIB  
+                </span>  
+
+                <button id="copyRef"  
+                        class="copy-btn">  
+                    COPY  
+                </button>  
+
+            </div>  
+
+            <button id="inviteBtn"  
+                    class="invite-btn">  
+                📨 INVITE FRIENDS  
+            </button>  
+
+        </div>  
+
+    </section>  
+
+
+    <!-- ============================= -->  
+    <!-- ARENA PAGE -->  
+    <!-- ============================= -->  
+
+    <section id="arenaPage"  
+             class="page game-page arena-page">  
+
+        <div class="arena-content">  
+
+            <div class="arena-icon">  
+                ⚔️  
+            </div>  
+
+            <h1>  
+                BABY SHIBA  
+                <br>  
+                ARENA  
+            </h1>  
+
+            <div class="coming-soon">  
+                COMING SOON  
+            </div>  
+
+            <p>  
+                Prepare your Baby Shiba.  
+            </p>  
+
+            <p>  
+                Battles are coming...  
+            </p>  
+
+            <div class="arena-preview">  
+
+                <span>⚔️</span>  
+                <span>🐕</span>  
+                <span>🏆</span>  
+
+            </div>  
+
+            <button class="arena-btn">  
+                🔥 PREPARE YOUR SHIBA  
+            </button>  
+
+        </div>  
+
+    </section>  
+
+
+    <!-- ============================= -->  
+    <!-- UPGRADE PAGE -->  
+    <!-- ============================= -->  
+
+    <section id="upgradePage"  
+             class="page game-page">  
+
+        <div class="page-header">  
+
+            <h2>⚡ Upgrades</h2>  
+
+            <p>  
+                Improve your mining power  
+            </p>  
+
+        </div>  
+
+        <div class="upgrade-list">  
+
+            <div class="upgrade-card">  
+
+                <div class="upgrade-icon">  
+                    ⚡  
+                </div>  
+
+                <div class="upgrade-info">  
+
+                    <div class="upgrade-name">  
+                        Tap Power  
+                    </div>  
+
+                    <div class="upgrade-desc">  
+                        Increase BSHIB per tap  
+                    </div>  
+
+                </div>  
+
+                <button id="upgradeTap"  
+    class="upgrade-btn"  
+    onclick="upgradeTap()">  
+
+                    <span id="tapCost">  
+                        100  
+                    </span>  
+                    BSHIB  
+
+                </button>  
+
+            </div>  
+
+
+            <div class="upgrade-card">  
+
+                <div class="upgrade-icon">  
+                    🔋  
+                </div>  
+
+                <div class="upgrade-info">  
+
+                    <div class="upgrade-name">  
+                        Energy  
+                    </div>  
+
+                    <div class="upgrade-desc">  
+                        Increase maximum energy  
+                    </div>  
+
+                </div>  
+
+                <button id="upgradeEnergy"  
+    class="upgrade-btn"  
+    onclick="upgradeEnergy()">  
+
+                    <span id="energyCost">  
+                        250  
+                    </span>  
+                    BSHIB  
+
+                </button>  
+
+            </div>  
+
+
+            <div class="upgrade-card">  
+
+                <div class="upgrade-icon">  
+                    🚀  
+                </div>  
+
+                <div class="upgrade-info">  
+
+                    <div class="upgrade-name">  
+                        Mining Boost  
+                    </div>  
+
+                    <div class="upgrade-desc">  
+                        Increase automatic mining  
+                    </div>  
+
+                </div>  
+
+                <button id="upgradeBoost"  
+    class="upgrade-btn"  
+    onclick="upgradeBoost()">  
+
+                    <span id="boostCost">  
+                        500  
+                    </span>  
+                    BSHIB  
+
+                </button>  
+
+            </div>  
+
+        </div>  
+
+    </section>  
+
+
+    <!-- ============================= -->  
+    <!-- BOTTOM NAVIGATION -->  
+    <!-- ============================= -->  
+
+<div class="bottom-nav">
+
+  <button class="nav-item active" onclick="showPage('miningPage')">  
+    <span>⛏️</span>  
+    <small>Mining</small>  
+  </button>    <button class="nav-item" onclick="showPage('itemsPage')">  
+    <span>🎒</span>  
+    <small>Items</small>  
+  </button>    <button class="nav-item" onclick="showPage('shopPage')">  
+    <span>🛒</span>  
+    <small>Shop</small>  
+  </button>    <button class="nav-item" onclick="showPage('vipPage')">  
+    <span>👑</span>  
+    <small>VIP</small>  
+  </button>    <button class="nav-item" onclick="showPage('friendsPage')">  
+    <span>👥</span>  
+    <small>Friends</small>  
+  </button>    <button class="nav-item" onclick="showPage('arenaPage')">  
+    <span>⚔️</span>  
+    <small>Arena</small>  
+  </button>  </div>  
+
+
+<!-- ============================= -->  
+<!-- TOAST -->  
+<!-- ============================= -->  
+
+<div id="toast"  
+     class="toast">  
+
+    <span id="toastText"></span>  
+
+</div>  
+
+
+<!-- EFFECTS -->  
+
+<div id="effects"  
+     class="effects">  
+</div>
+
+</div>  <script src="app.js"></script>  </body>  
+</html>  
