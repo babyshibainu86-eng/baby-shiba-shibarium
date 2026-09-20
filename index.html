@@ -984,206 +984,214 @@
                     Fight enemies, collect rewards and upgrade your Baby Shiba.
                 </small>
 
-            </div>
-
-        </section>
-
-
         <!-- =================================================
-             UPGRADE PAGE
-             ================================================= -->
+     UPGRADE PAGE
+     ================================================= -->
 
-        <section
-            id="upgradePage"
-            class="game-page"
-            style="display:none;"
+<section
+    id="upgradePage"
+    class="game-page"
+    style="display:none;"
+>
+
+    <div class="page-header">
+
+        <h2>
+            Upgrades
+        </h2>
+
+        <p>
+            Improve your mining performance
+        </p>
+
+    </div>
+
+
+    <!-- TAP POWER -->
+
+    <div class="upgrade-card">
+
+        <div class="upgrade-icon">
+            👆
+        </div>
+
+        <div class="upgrade-info">
+
+            <h3>
+                Tap Power
+            </h3>
+
+            <p>
+                Increase BSHIB earned per tap
+            </p>
+
+            <strong>
+                Cost:
+                <span id="tapCost">
+                    100
+                </span>
+                BSHIB
+            </strong>
+
+        </div>
+
+        <button
+            id="upgradeTap"
+            type="button"
+            onclick="upgradeTap()"
         >
+            UPGRADE
+        </button>
 
-            <div class="page-header">
-
-                <h2>
-                    Upgrades
-                </h2>
-
-                <p>
-                    Improve your mining performance
-                </p>
-
-            </div>
+    </div>
 
 
-            <div class="upgrade-card">
+    <!-- ENERGY -->
 
-                <div class="upgrade-icon">
-                    👆
-                </div>
+    <div class="upgrade-card">
 
-                <div class="upgrade-info">
+        <div class="upgrade-icon">
+            ⚡
+        </div>
 
-                    <h3>
-                        Tap Power
-                    </h3>
+        <div class="upgrade-info">
 
-                    <p>
-                        Increase BSHIB earned per tap
-                    </p>
+            <h3>
+                Energy
+            </h3>
 
-                    <strong>
-                        Cost:
-                        <span id="tapUpgradeCost">
-                            100
-                        </span>
-                        BSHIB
-                    </strong>
+            <p>
+                Increase maximum energy
+            </p>
 
-                </div>
+            <strong>
+                Cost:
+                <span id="energyCost">
+                    250
+                </span>
+                BSHIB
+            </strong>
 
-                <button
-                    id="upgradeTap"
-                    type="button"
-                >
-                    UPGRADE
-                </button>
+        </div>
 
-            </div>
-
-
-            <div class="upgrade-card">
-
-                <div class="upgrade-icon">
-                    ⚡
-                </div>
-
-                <div class="upgrade-info">
-
-                    <h3>
-                        Energy
-                    </h3>
-
-                    <p>
-                        Increase maximum energy
-                    </p>
-
-                    <strong>
-                        Cost:
-                        <span id="energyUpgradeCost">
-                            250
-                        </span>
-                        BSHIB
-                    </strong>
-
-                </div>
-
-                <button
-                    id="upgradeEnergy"
-                    type="button"
-                >
-                    UPGRADE
-                </button>
-
-            </div>
-
-
-            <div class="upgrade-card">
-
-                <div class="upgrade-icon">
-                    🚀
-                </div>
-
-                <div class="upgrade-info">
-
-                    <h3>
-                        Mining Boost
-                    </h3>
-
-                    <p>
-                        Increase automatic mining rate
-                    </p>
-
-                    <strong>
-                        Cost:
-                        <span id="boostUpgradeCost">
-                            500
-                        </span>
-                        BSHIB
-                    </strong>
-
-                </div>
-
-                <button
-                    id="upgradeBoost"
-                    type="button"
-                >
-                    UPGRADE
-                </button>
-
-                <!-- =====================================================
-             BOTTOM NAV
-             ===================================================== -->
-
-        <nav
-            id="bottomNav"
-            class="bottom-nav"
+        <button
+            id="upgradeEnergy"
+            type="button"
+            onclick="upgradeEnergy()"
         >
+            UPGRADE
+        </button>
 
-            <button
-                class="nav-item active"
-                type="button"
-                data-page="miningPage"
-            >
-                <span>⛏️</span>
-                <small>Mining</small>
-            </button>
+    </div>
 
-            <button
-                class="nav-item"
-                type="button"
-                data-page="itemsPage"
-            >
-                <span>🎒</span>
-                <small>Items</small>
-            </button>
 
-            <button
-                class="nav-item"
-                type="button"
-                data-page="shopPage"
-            >
-                <span>🛒</span>
-                <small>Shop</small>
-            </button>
+    <!-- MINING BOOST -->
 
-            <button
-                class="nav-item"
-                type="button"
-                data-page="vipPage"
-            >
-                <span>👑</span>
-                <small>VIP</small>
-            </button>
+    <div class="upgrade-card">
 
-            <button
-                class="nav-item"
-                type="button"
-                data-page="friendsPage"
-            >
-                <span>👥</span>
-                <small>Friends</small>
-            </button>
+        <div class="upgrade-icon">
+            🚀
+        </div>
 
-            <button
-                class="nav-item"
-                type="button"
-                data-page="arenaPage"
-            >
-                <span>⚔️</span>
-                <small>Arena</small>
-            </button>
+        <div class="upgrade-info">
 
-        </nav>
+            <h3>
+                Mining Boost
+            </h3>
 
-</main>
+            <p>
+                Increase automatic mining rate
+            </p>
 
+            <strong>
+                Cost:
+                <span id="boostCost">
+                    500
+                </span>
+                BSHIB
+            </strong>
+
+        </div>
+
+        <button
+            id="upgradeBoost"
+            type="button"
+            onclick="upgradeBoost()"
+        >
+            UPGRADE
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BOTTOM NAV
+     ===================================================== -->
+
+<nav
+    id="bottomNav"
+    class="bottom-nav"
+>
+
+    <button
+        class="nav-item active"
+        type="button"
+        data-page="miningPage"
+    >
+        <span>⛏️</span>
+        <small>Mining</small>
+    </button>
+
+    <button
+        class="nav-item"
+        type="button"
+        data-page="itemsPage"
+    >
+        <span>🎒</span>
+        <small>Items</small>
+    </button>
+
+    <button
+        class="nav-item"
+        type="button"
+        data-page="shopPage"
+    >
+        <span>🛒</span>
+        <small>Shop</small>
+    </button>
+
+    <button
+        class="nav-item"
+        type="button"
+        data-page="vipPage"
+    >
+        <span>👑</span>
+        <small>VIP</small>
+    </button>
+
+    <button
+        class="nav-item"
+        type="button"
+        data-page="friendsPage"
+    >
+        <span>👥</span>
+        <small>Friends</small>
+    </button>
+
+    <button
+        class="nav-item"
+        type="button"
+        data-page="arenaPage"
+    >
+        <span>⚔️</span>
+        <small>Arena</small>
+    </button>
+
+</nav>
+
+        </main>    
     <!-- =====================================================
          TOAST
          ===================================================== -->
